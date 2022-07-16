@@ -1,0 +1,16 @@
+{
+    "name": "will/sdk",
+    "description": "pay sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "will",
+            "email": "will@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-4": {"Pay\\": "src/pay/"}
+    }
+}

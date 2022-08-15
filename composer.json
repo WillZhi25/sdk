@@ -1,0 +1,22 @@
+{
+  "name": "will-zhi/sdk",
+  "description": "pay sdk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "will",
+      "email": "will@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pay\\": "src/pay/"
+    }
+  }
+}

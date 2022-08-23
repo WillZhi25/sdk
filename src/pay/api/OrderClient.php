@@ -7,8 +7,6 @@
 
 namespace Pay\api;
 
-use Pay\consts\ApiConst;
-use Pay\consts\SDKConst;
 use Pay\model\CvsOrderAppendRequest;
 
 class OrderClient extends BaseClient

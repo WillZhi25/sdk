@@ -1,7 +1,7 @@
 <?php
 
 namespace unit;
-require '../../autoload.php';
+require '../autoload.php';
 
 use Pay\api\LoginClient;
 
@@ -23,5 +23,5 @@ class TokenTest
 
 }
 
-$test = new TokenTest();
+$test = new LoginTest();
 $test->testBasicTest();

@@ -1,11 +1,11 @@
 <?php
 
 namespace unit;
-require '../../autoload.php';
+require '../autoload.php';
 
 use Pay\api\OrderClient;
 
-class OrderClientTest
+class CvsOrderAppendTest
 {
     /**
      * A basic test example.
@@ -25,5 +25,5 @@ class OrderClientTest
 
 }
 
-$test = new OrderClientTest();
+$test = new CvsOrderAppendTest();
 $test->CvsIbonUpdateDate();

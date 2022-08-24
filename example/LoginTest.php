@@ -1,6 +1,7 @@
 <?php
 
-namespace unit;
+namespace example;
+require_once "ExampleConst.php";
 require '../autoload.php';
 
 use Pay\api\LoginClient;

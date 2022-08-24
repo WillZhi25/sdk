@@ -1,0 +1,9 @@
+<?php
+namespace example;
+
+
+class ExampleConst
+{
+    const TOKEN = "LjikiwSRMRlDP3sjyRoVXWoQdJoOcjUCDT2egz_9FxaZjJ6cBjlqQZHEo_c2Sh96wrkO_KUgHoydg0Ndw2aMjY2l2nKYXsxmrYgpWCE5MC3VdOiBfLMGySsWo9kFnyQyyKBi6WuGSiCSRvAGNS27uTYu_a_y6Qy7ZqnijbvxwoaLDJ6PQgAMIFEejbd0SA6S77TgfVp2A9Se45k4_EoSinN-MUMBlxMXSMrs0QX3FPc";
+
+}

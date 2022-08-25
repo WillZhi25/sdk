@@ -4,9 +4,9 @@ namespace example;
 require_once "ExampleConst.php";
 require '../autoload.php';
 
-use Pay\api\OrderClient;
 use Pay\api\SmsClient;
 
+// pass
 class SmsShortNameUpdateTest
 {
     /**
@@ -18,9 +18,7 @@ class SmsShortNameUpdateTest
     {
         $token = ExampleConst::TOKEN;
         $client = new SmsClient($token);
-
-        $result = $client->SmsShortNameUpdate('CV0100000008', '2019021500654741', '6290');
-
+        $result = $client->SmsShortNameUpdate('CV0100000008', '0', 'E貓哥UAT1');
         var_dump($result);
     }
 

@@ -4,10 +4,10 @@ namespace example;
 require_once "ExampleConst.php";
 require '../autoload.php';
 
-use Pay\api\LoginClient;
-use Pay\api\OrderClient;
-
-class CvsIbonUpdateDateTest
+use Pay\api\CocsOrderClient;
+use Pay\model\CocsOrderAppend2Request;
+// pass
+class CocsOrderAppend2Test
 {
     /**
      * A basic test example.
@@ -17,15 +17,17 @@ class CvsIbonUpdateDateTest
     public function test()
     {
         $token = ExampleConst::TOKEN;
-        $client = new OrderClient($token);
+        $client = new CocsOrderClient($token);
 
-        $result = $client->CvsIbonUpdateDate('CV0100000008', '2019021500654741',
-            '6290', '2022-10-10', 'CCAT', '904906547417');
+        $request = new CocsOrderAppend2Request();
+        $request->initData('CV0100000008', 'COCSTEST20220825113853322', '100', '111', 'YY',
+            '0123812312', 'ffff@gmail.com', 'esun', '', '', '', date('Y-m-d H:i:s', time() + 8 * 3600));
+        $result = $client->CocsOrderAppend2($request);
 
         var_dump($result);
     }
 
 }
 
-$test = new CvsIbonUpdateDateTest();
+$test = new CocsOrderAppend2Test();
 $test->test();

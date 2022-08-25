@@ -4,27 +4,28 @@ namespace example;
 require_once "ExampleConst.php";
 require '../autoload.php';
 
+use Pay\api\DphOrderClient;
 use Pay\api\OrderClient;
 
-class CvsIbonUpdateDateTest
+class DphCashRequestTest
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function CvsIbonUpdateDate()
+    public function test()
     {
-        $token = 'ia70p8-vtY5Cdw5K1fnC5nckln_bXlfUXmqHb28kBsyDQuHpiyWBqJ6E-KxZuDtfB9ssWczdeg4ACuUblx7rKwi66cdtHrgtrA42zHDn0ZVFjqVA7kVF-ZTpUjrGZ5mb580nL2vsLpxSI9Dq2QZxuTBRAmMWKqK3KNzu5h5Gu5g5R8FpTMhn9dOCKFOnU_NqZC1H61MntyGODX0AnocIH5duX8cxEsUSutaqal578XA';
-        $client = new OrderClient($token);
+        $token = ExampleConst::TOKEN;
+        $client = new DphOrderClient($token);
 
-        $result = $client->CvsIbonUpdateDate('CV0100000008', '2019021500654741',
-            '6290', '2022-10-10', 'CCAT', '904906547417');
+        $result = $client->DphCashRequest('2020120800660052', '100',
+            '100', date('Y-m-d H:i:s', time() + 8 * 3600));
 
         var_dump($result);
     }
 
 }
 
-$test = new CvsOrderAppendTest();
-$test->CvsIbonUpdateDate();
+$test = new DphCashRequestTest();
+$test->test();

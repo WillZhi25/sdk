@@ -3,10 +3,9 @@
 namespace example;
 require_once "ExampleConst.php";
 require '../autoload.php';
-
-
 use Pay\api\OrderClient;
 
+// pass
 class CvsIbonUpdateDateTest
 {
     /**
@@ -19,8 +18,8 @@ class CvsIbonUpdateDateTest
         $token = ExampleConst::TOKEN;
         $client = new OrderClient($token);
 
-        $result = $client->CvsIbonUpdateDate('CV0100000008', '2019021500654741',
-            '6290', '2022-10-10', 'CCAT', '904906547417');
+        $result = $client->CvsIbonUpdateDate('CV0100000008', '20145021500654741',
+            '2022', '2022-10-01', 'CCAT', '228306634703');
 
         var_dump($result);
     }

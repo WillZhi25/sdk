@@ -6,6 +6,7 @@ require '../autoload.php';
 
 use Pay\api\LoginClient;
 
+// pass
 class LoginTest
 {
     /**

@@ -24,9 +24,9 @@ class CocsOrderClient extends BaseClient
     public function CocsOrderAppend(CocsOrderAppendRequest $request)
     {
         $params = [
-            "cmd" => "CvsOrderAppend"
+            "cmd" => "CocsOrderAppend"
         ];
-        $params = array_merge($params, json_decode(json_encode($request), true));
+        $params = array_merge($params, $request->toArray());
         return $this->baseCollect($params);
     }
 
@@ -43,7 +43,7 @@ class CocsOrderClient extends BaseClient
         $params = [
             "cmd" => "CocsOrderAppend2"
         ];
-        $params = array_merge($params, json_decode(json_encode($request), true));
+        $params = array_merge($params, $request->toArray());
         return $this->baseCollect($params);
     }
 
@@ -170,7 +170,7 @@ class CocsOrderClient extends BaseClient
      * @author will <zhiwupei@gmail.com>
      * @since  2022-08-13
      */
-     public function CocsUnionpayAppend($cust_id, $cust_order_no, $order_amount, $order_detail, $send_time, $success_url, $apn_url = '')
+     public function CocsUnionpayAppend($cust_id, $cust_order_no, $order_amount, $order_detail, $send_time, $success_url = '', $apn_url = '')
     {
         $params = [
             "cmd" => "CocsUnionpayAppend",

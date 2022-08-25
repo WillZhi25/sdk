@@ -7,20 +7,20 @@
 
 namespace Pay\model;
 
-class CocsOrderAppend2Request
+class CocsOrderAppend2Request extends BaseModel
 {
-    protected $cust_id;
-    protected $cust_order_no;
-    protected $order_amount;
-    protected $order_detail;
-    protected $payer_name;
-    protected $payer_mobile;
-    protected $payer_email;
-    protected $acquirer_type;
-    protected $limit_product_id;
-    protected $success_url;
-    protected $apn_url;
-    protected $send_time;
+    public $cust_id;
+    public $cust_order_no;
+    public $order_amount;
+    public $order_detail;
+    public $payer_name;
+    public $payer_mobile;
+    public $payer_email;
+    public $acquirer_type;
+    public $limit_product_id;
+    public $success_url;
+    public $apn_url;
+    public $send_time;
 
     /**
      * @param $cust_id

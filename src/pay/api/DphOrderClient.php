@@ -9,6 +9,21 @@ namespace Pay\api;
 
 class DphOrderClient extends BaseClient
 {
+
+    /**
+     * @param $cust_id
+     * @param $cust_order_no
+     * @param $order_amount
+     * @param $order_detail
+     * @param $payer_name
+     * @param $acquirer_type
+     * @param $send_time
+     * @param string $success_url
+     * @param string $apn_url
+     * @return mixed
+     * @author will <zhiwupei@gmail.com>
+     * @since  2022-08-25
+     */
     public function DphOrderAppend($cust_id, $cust_order_no, $order_amount, $order_detail,
                                    $payer_name, $acquirer_type, $send_time, $success_url = '', $apn_url = '')
     {

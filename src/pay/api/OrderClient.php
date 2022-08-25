@@ -26,7 +26,7 @@ class OrderClient extends BaseClient
         $params = [
             "cmd" => "CvsOrderAppend"
         ];
-        $params = array_merge($params, json_decode(json_encode($request), true));
+        $params = array_merge($params, $request->toArray());
         return $this->baseCollect($params);
     }
 

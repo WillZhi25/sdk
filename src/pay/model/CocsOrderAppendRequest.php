@@ -7,17 +7,17 @@
 
 namespace Pay\model;
 
-class CocsOrderAppendRequest
+class CocsOrderAppendRequest  extends BaseModel
 {
-    protected $cust_id;
-    protected $cust_order_no;
-    protected $order_amount;
-    protected $order_detail;
-    protected $acquirer_type;
-    protected $limit_product_id;
-    protected $send_time;
-    protected $success_url;
-    protected $apn_url;
+    public $cust_id;
+    public $cust_order_no;
+    public $order_amount;
+    public $order_detail;
+    public $acquirer_type;
+    public $limit_product_id;
+    public $send_time;
+    public $success_url;
+    public $apn_url;
 
 
     /**
@@ -188,6 +188,7 @@ class CocsOrderAppendRequest
     {
         $this->apn_url = $apn_url;
     }
+
 
 
 }

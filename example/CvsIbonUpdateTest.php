@@ -6,7 +6,10 @@ require '../autoload.php';
 
 use Pay\api\OrderClient;
 
-// pass
+/**
+ * CVS 代收代付
+ * 變更 ibon 繳款金額
+ */
 class CvsIbonUpdateTest
 {
     /**

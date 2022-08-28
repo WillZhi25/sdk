@@ -6,7 +6,10 @@ require '../autoload.php';
 
 use Pay\api\OrderClient;
 
-// pass
+/**
+ * CVS 代收代付
+ * 訂單日期區間查詢
+ */
 class CvsOrderListQueryTest
 {
     /**

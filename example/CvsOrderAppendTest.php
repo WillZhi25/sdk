@@ -7,7 +7,10 @@ require '../autoload.php';
 use Pay\api\OrderClient;
 use Pay\model\CvsOrderAppendRequest;
 
-// pass
+/**
+ * CVS 代收代付
+ * 契客新增訂單
+ */
 class CvsOrderAppendTest
 {
     /**

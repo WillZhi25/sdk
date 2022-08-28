@@ -6,7 +6,10 @@ require '../autoload.php';
 
 use Pay\api\CocsOrderClient;
 
-// mark
+/**
+ * COCS 線上刷卡
+ * 指定請款金額(部分請款、部分取消授權)
+ */
 class CocsCashRequestTest
 {
     /**

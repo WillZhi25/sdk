@@ -5,10 +5,11 @@ require_once "ExampleConst.php";
 require '../autoload.php';
 
 use Pay\api\CocsOrderClient;
-use Pay\api\LoginClient;
-use Pay\api\OrderClient;
 
-// pass
+/**
+ * COCS 線上刷卡
+ * 訂單日期區間查詢
+ */
 class CocsOrderListQueryTest
 {
     /**

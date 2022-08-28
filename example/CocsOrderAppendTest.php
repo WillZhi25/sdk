@@ -7,7 +7,10 @@ require '../autoload.php';
 use Pay\api\CocsOrderClient;
 use Pay\model\CocsOrderAppendRequest;
 
-// pass
+/**
+ * COCS 線上刷卡
+ * 契客新增刷卡訂單
+ */
 class CocsOrderAppendTest
 {
     /**

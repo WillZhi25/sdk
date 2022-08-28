@@ -6,7 +6,10 @@ require '../autoload.php';
 
 use Pay\api\CocsOrderClient;
 
-// pass
+/**
+ * COCS 線上刷卡
+ * 契客新增刷卡訂單-玉山銀聯卡
+ */
 class CocsUnionpayAppendTest
 {
     /**

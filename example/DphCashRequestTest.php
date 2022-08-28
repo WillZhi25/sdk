@@ -5,7 +5,6 @@ require_once "ExampleConst.php";
 require '../autoload.php';
 
 use Pay\api\DphOrderClient;
-use Pay\api\OrderClient;
 
 class DphCashRequestTest
 {

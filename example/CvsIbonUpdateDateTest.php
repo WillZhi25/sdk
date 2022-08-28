@@ -5,7 +5,10 @@ require_once "ExampleConst.php";
 require '../autoload.php';
 use Pay\api\OrderClient;
 
-// pass
+/**
+ * CVS 代收代付
+ * 變更 ibon 繳款到期日
+ */
 class CvsIbonUpdateDateTest
 {
     /**

@@ -6,6 +6,10 @@ require '../autoload.php';
 
 use Pay\api\DphOrderClient;
 
+/**
+ * DPH 行動支付
+ * 訂單查詢
+ */
 class DphOrderQueryTest
 {
     /**
@@ -18,7 +22,7 @@ class DphOrderQueryTest
         $token = ExampleConst::TOKEN;
         $client = new DphOrderClient($token);
 
-        $result = $client->DphOrderQuery('2020120800660052');
+        $result = $client->DphOrderQuery('CV0100000008','DPHTEST20220624175112699');
 
         var_dump($result);
     }

@@ -6,7 +6,10 @@ require '../autoload.php';
 
 use Pay\api\SmsClient;
 
-// pass
+/**
+ * 主檔管理
+ * 變更金流服務簡訊簡稱
+ */
 class SmsShortNameUpdateTest
 {
     /**

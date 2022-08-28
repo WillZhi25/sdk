@@ -6,6 +6,10 @@ require '../autoload.php';
 
 use Pay\api\DphOrderClient;
 
+/**
+ * DPH 行動支付
+ * 訂單取消授權
+ */
 class DphOrderCancelTest
 {
     /**
@@ -18,8 +22,8 @@ class DphOrderCancelTest
         $token = ExampleConst::TOKEN;
         $client = new DphOrderClient($token);
 
-        $result = $client->DphOrderCancel('CV0100000008', '2019021500654741',
-            '6290', '2022-10-10', 'CCAT', '904906547417');
+        $result = $client->DphOrderCancel('CV0100000008','DPHTEST20220624175112699', '100',
+            'opw', date('Y-m-d H:i:s', time() + 8 * 3600));
 
         var_dump($result);
     }

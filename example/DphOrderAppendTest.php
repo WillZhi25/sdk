@@ -5,8 +5,11 @@ require_once "ExampleConst.php";
 require '../autoload.php';
 
 use Pay\api\DphOrderClient;
-use Pay\api\OrderClient;
 
+/**
+ * DPH 行動支付
+ * 契客新增行動支付訂單
+ */
 class DphOrderAppendTest
 {
     /**
@@ -19,8 +22,8 @@ class DphOrderAppendTest
         $token = ExampleConst::TOKEN;
         $client = new DphOrderClient($token);
 
-        $result = $client->DphOrderAppend('CV0100000008', '2019021500654741',
-            '6290', '2022-10-10', 'CCAT', '904906547417');
+        $result = $client->DphOrderAppend('CV0100000008','DPHTEST20220624175112699', '100',
+            '', 'pay', 'opw', date('Y-m-d H:i:s', time() + 8 * 3600));
 
         var_dump($result);
     }

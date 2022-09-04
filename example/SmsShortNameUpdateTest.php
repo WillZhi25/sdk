@@ -19,7 +19,7 @@ class SmsShortNameUpdateTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new SmsClient($token);
         $result = $client->SmsShortNameUpdate('CV0100000008', '0', 'E貓哥UAT1');
         var_dump($result);

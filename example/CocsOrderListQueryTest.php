@@ -19,7 +19,7 @@ class CocsOrderListQueryTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new CocsOrderClient($token);
 
         $result = $client->CocsOrderListQuery('CV0100000008', '2022-06-28', '2022-07-01');

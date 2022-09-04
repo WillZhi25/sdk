@@ -7,20 +7,20 @@
 
 namespace Pay\model;
 
-class CocsOrderAppend2Request extends BaseModel
+class DphOrderAppendRequest extends BaseModel
 {
     public $cust_id;
     public $cust_order_no;
     public $order_amount;
     public $order_detail;
     public $payer_name;
-    public $payer_mobile;
-    public $payer_email;
     public $acquirer_type;
-    public $limit_product_id;
-    public $success_url;
-    public $apn_url;
     public $send_time;
+    public $success_url = '';
+    public $apn_url = '';
+
+
+
     /*********** 電子發票相關資訊 (未開通發票功能請忽略) start  **************/
     public $b2c;
     public $product_name;
@@ -33,30 +33,59 @@ class CocsOrderAppend2Request extends BaseModel
     public $payer_address;
     public $buyer_bill_no;
     public $buyer_invoice_title;
+    public $payer_mobile;
+    public $payer_email;
+
+    /**
+     * @return mixed
+     */
+    public function getPayerMobile()
+    {
+        return $this->payer_mobile;
+    }
+
+    /**
+     * @param mixed $payer_mobile
+     */
+    public function setPayerMobile($payer_mobile)
+    {
+        $this->payer_mobile = $payer_mobile;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPayerEmail()
+    {
+        return $this->payer_email;
+    }
+
+    /**
+     * @param mixed $payer_email
+     */
+    public function setPayerEmail($payer_email)
+    {
+        $this->payer_email = $payer_email;
+    }
     /*********** 電子發票相關資訊 (未開通發票功能請忽略) end  **************/
+
     /**
      * @param $cust_id
      * @param $cust_order_no
      * @param $order_amount
      * @param $order_detail
      * @param $payer_name
-     * @param $payer_mobile
-     * @param $payer_email
      * @param $acquirer_type
-     * @param $limit_product_id
      * @param $send_time
      */
-    public function initData($cust_id, $cust_order_no, $order_amount, $order_detail, $payer_name, $payer_mobile, $payer_email, $acquirer_type, $limit_product_id, $send_time)
+    public function initData($cust_id, $cust_order_no, $order_amount, $order_detail, $payer_name, $acquirer_type,  $send_time)
     {
         $this->cust_id = $cust_id;
         $this->cust_order_no = $cust_order_no;
         $this->order_amount = $order_amount;
         $this->order_detail = $order_detail;
         $this->payer_name = $payer_name;
-        $this->payer_mobile = $payer_mobile;
-        $this->payer_email = $payer_email;
         $this->acquirer_type = $acquirer_type;
-        $this->limit_product_id = $limit_product_id;
         $this->send_time = $send_time;
     }
 
@@ -143,38 +172,6 @@ class CocsOrderAppend2Request extends BaseModel
     /**
      * @return mixed
      */
-    public function getPayerMobile()
-    {
-        return $this->payer_mobile;
-    }
-
-    /**
-     * @param mixed $payer_mobile
-     */
-    public function setPayerMobile($payer_mobile)
-    {
-        $this->payer_mobile = $payer_mobile;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPayerEmail()
-    {
-        return $this->payer_email;
-    }
-
-    /**
-     * @param mixed $payer_email
-     */
-    public function setPayerEmail($payer_email)
-    {
-        $this->payer_email = $payer_email;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getAcquirerType()
     {
         return $this->acquirer_type;
@@ -191,54 +188,6 @@ class CocsOrderAppend2Request extends BaseModel
     /**
      * @return mixed
      */
-    public function getLimitProductId()
-    {
-        return $this->limit_product_id;
-    }
-
-    /**
-     * @param mixed $limit_product_id
-     */
-    public function setLimitProductId($limit_product_id)
-    {
-        $this->limit_product_id = $limit_product_id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSuccessUrl()
-    {
-        return $this->success_url;
-    }
-
-    /**
-     * @param mixed $success_url
-     */
-    public function setSuccessUrl($success_url)
-    {
-        $this->success_url = $success_url;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getApnUrl()
-    {
-        return $this->apn_url;
-    }
-
-    /**
-     * @param mixed $apn_url
-     */
-    public function setApnUrl($apn_url)
-    {
-        $this->apn_url = $apn_url;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getSendTime()
     {
         return $this->send_time;
@@ -250,6 +199,38 @@ class CocsOrderAppend2Request extends BaseModel
     public function setSendTime($send_time)
     {
         $this->send_time = $send_time;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSuccessUrl()
+    {
+        return $this->success_url;
+    }
+
+    /**
+     * @param string $success_url
+     */
+    public function setSuccessUrl($success_url)
+    {
+        $this->success_url = $success_url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getApnUrl()
+    {
+        return $this->apn_url;
+    }
+
+    /**
+     * @param string $apn_url
+     */
+    public function setApnUrl($apn_url)
+    {
+        $this->apn_url = $apn_url;
     }
 
     /**
@@ -427,8 +408,6 @@ class CocsOrderAppend2Request extends BaseModel
     {
         $this->buyer_invoice_title = $buyer_invoice_title;
     }
-
-
 
 
 }

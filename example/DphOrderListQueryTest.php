@@ -19,7 +19,7 @@ class DphOrderListQueryTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new DphOrderClient($token);
         $result = $client->DphOrderListQuery('CV0100000008','2022-06-01', '2022-07-01');
         var_dump($result);

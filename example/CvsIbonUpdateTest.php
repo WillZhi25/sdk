@@ -19,7 +19,7 @@ class CvsIbonUpdateTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new OrderClient($token);
 
         $result = $client->CvsIbonUpdate('CV0100000008', '20145021500654741',

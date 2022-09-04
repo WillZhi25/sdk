@@ -19,7 +19,7 @@ class DphOrderCancelTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new DphOrderClient($token);
 
         $result = $client->DphOrderCancel('CV0100000008','DPHTEST20220624175112699', '100',

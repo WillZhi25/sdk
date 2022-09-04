@@ -19,7 +19,7 @@ class DphOrderRefundTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new DphOrderClient($token);
 
         $result = $client->DphOrderRefund('CV0100000008', 'DPHTEST20220624175112699',

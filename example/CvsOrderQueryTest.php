@@ -19,7 +19,7 @@ class CvsOrderQueryTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new OrderClient($token);
 
         $result = $client->CvsOrderQuery('CV0100000008', '20145021500654741');

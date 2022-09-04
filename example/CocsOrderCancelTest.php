@@ -19,7 +19,7 @@ class CocsOrderCancelTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new CocsOrderClient($token);
 
         $result = $client->CocsOrderCancel('CV0100000008', 'COCSTEST20220825113853322', '100', 'esun', date('Y-m-d H:i:s', time() + 8 * 3600));

@@ -19,7 +19,7 @@ class CocsOrderQueryTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new CocsOrderClient($token);
 
         $result = $client->CocsOrderQuery('CV0100000008', 'COCSTEST20220629113853322');

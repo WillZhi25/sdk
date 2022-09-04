@@ -4,5 +4,7 @@ namespace example;
 
 class ExampleConst
 {
-    const TOKEN = "09xVjptigzAY6Zwo0G_cg4XV_gnsBInSv21EohaOs3uEEC3FGZmFh38As3Vvy8s3cONEaig_51p9Lr8C_HpsLjLP3rnNdxYdSICFGFINYr5SlOrLTFIYJehX3DonvAQfyWMjO4mKa5DYwXGbiUqM2EVsZva4QXeQHqq0eltlxgb2cq_6qnQpBikWvPE4RFl3JfQ57Fok9GwgvqjC0VcwfquyjJilR2Gu-0gt_m4sxWw";
+    public static function TOKEN() {
+        return file_get_contents("token.txt");
+    }
 }

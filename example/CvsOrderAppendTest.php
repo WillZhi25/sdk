@@ -20,14 +20,32 @@ class CvsOrderAppendTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new OrderClient($token);
 
         $request = new CvsOrderAppendRequest();
 
-        $request->initData("CV0100000008", '20145021500654741', '2022', '2022-10-10',
-        '王大', '115', '台北', '0900123123', 'yanlee@bankpro.com.tw', '0',
-            '', '', '');
+        $request->initData("CV0100000008",
+            'Cvs'.date('YmdHis').rand(100, 999),
+            '2022',
+            '2022-10-10',
+            '王大',
+            '115',
+            '台北',
+            '0900123123',
+            'yanlee@bankpro.com.tw',
+            '0',
+            '');
+
+        // 帶電子發票相關參數, 如果不需要測試發票，即可刪除以下代碼
+        $request->setB2c(1);
+        $request->setProductName("iPhone");
+        $request->setPrintInvoice(1);
+        $request->setVehicleBarcode(0);
+        $request->setDonateInvoice(0);
+        $request->setPayerAddress("台北");
+        $request->setPayerMobile("0970325698");
+        $request->setPayerEmail("abc@gmail.com");
 
         $result = $client->CvsOrderAppend($request);
 

@@ -19,7 +19,7 @@ class CocsCashRequestTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new CocsOrderClient($token);
 
         $date = date('Y-m-d H:i:s', time() + 8 * 3600);

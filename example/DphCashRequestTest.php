@@ -19,7 +19,7 @@ class DphCashRequestTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new DphOrderClient($token);
 
         $result = $client->DphCashRequest('CV0100000008','DPHTEST20220624175112699', '100',

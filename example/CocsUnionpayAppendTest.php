@@ -19,7 +19,7 @@ class CocsUnionpayAppendTest
      */
     public function test()
     {
-        $token = ExampleConst::TOKEN;
+        $token = ExampleConst::TOKEN();
         $client = new CocsOrderClient($token);
 
         $result = $client->CocsUnionpayAppend('CV0100000008', 'COCSTEST20220825113853389',
